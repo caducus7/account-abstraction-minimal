@@ -8,6 +8,7 @@
 
 Using eth-infinitism/account-abstraction for the implementation.
 
+```
 struct PackedUserOperation {
 address sender; --- our minimal account
 uint256 nonce; --- nonce
@@ -18,8 +19,8 @@ uint256 preVerificationGas;
 bytes32 gasFees;
 bytes paymasterAndData; --- if we setup a paymaster we need this
 bytes signature; --- valid signature, used to verify owner address
-}
-
+} 
+```
 1.  ## Purpose of validateUserOp:
 
     The purpose of this function is to validate user operations by ensuring that the signature is valid. It also handles missing account funds.
